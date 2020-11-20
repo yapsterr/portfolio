@@ -1,0 +1,19 @@
+svg {
+    width: 100px;
+    height: 120px;
+    margin: 0 auto;
+    display:block;
+    animation: rotation 10s linear infinite;
+  }
+  .two{fill:#000;}
+  .one{fill:#FFCE00;}
+  .middle{fill:#000;}
+
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }

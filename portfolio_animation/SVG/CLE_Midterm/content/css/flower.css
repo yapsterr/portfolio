@@ -1,0 +1,14 @@
+#flower {
+  max-width: 50px;
+  height: 50px;
+  animation:rotate linear infinite 8s;
+}
+
+@keyframes rotate{
+  from{
+    -webkit-transform: rotate(360deg);
+  }
+  to{
+    -webkit-transform: rotate(0deg);
+  }
+}

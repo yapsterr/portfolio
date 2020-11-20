@@ -1,0 +1,11 @@
+body{
+    background-color: rgb(105,105,105);
+}
+#wrap{
+    width: 900px;
+    height: 780px;
+    margin: 0 auto;
+}
+.txt{
+    font-size: 10px;
+}

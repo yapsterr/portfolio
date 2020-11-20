@@ -1,0 +1,402 @@
+#content{
+    width: 100%;
+    min-height: 700px;
+  }
+  .box{
+    width: 28%;
+    height: auto;
+    float: left;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    padding: 25px;
+    text-align: center;
+    margin: 1%;
+    color: #fff;
+  }
+  .box:before{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    width: 100%;
+    border-bottom: 4px solid transparent;
+    border-left: 4px solid transparent;
+    box-sizing: border-box;
+    transform: translateX(100%);
+  }
+  .box:after{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    border-top: 4px solid transparent;
+    border-right: 4px solid transparent;
+    box-sizing: border-box;
+    transform: translateX(-100%);
+  }
+  .box:hover:before{
+    border-color: orange;
+    height: 100%;
+    transform: translateX(0);
+    transition: .3s transform linear, .3s height linear .3s;
+  }
+  .box:hover:after{
+    border-color: orange;
+    height: 100%;
+    transform: translateX(0);
+    transition: .3s transform linear .3s, .3s height linear .5s;;
+  }
+
+  #drink{
+    display:flex;
+    width:100%;
+    height:auto;
+    margin-left: 20%;
+    margin-top: 50%;
+    transform:translate(-20%,-20%);
+    justify-content:space-evenly;
+  }
+  .bottle{
+    position:relative ;
+    width:50px;
+    height:80px;
+    background-color:#e1f0fa;
+    border-radius:100px 100px 20px 20px;
+    margin-top:50px;
+    margin-left:50px;
+    animation: move 1s 1s ease-in forwards,
+    bottle-back 1s 3.5s  ease-in forwards;
+}
+.bottle:before{
+    content:"";
+    position:absolute;
+    width:90%;
+    height:80%;
+    border-radius:2px 2px 10px 10px;
+    background-color:#c9563c;
+    bottom:2%; 
+    left:50%;
+    margin-left:-45%;
+    animation: drink 1s 1s ease-in forwards,bottle-height 1s 2.4s  ease-in forwards,drink-back-bottle 1s 3.5s ease-in forwards;
+    
+}
+
+.neck{
+    position:relative;
+    width:20px;
+    height:55px;
+    background-color:#c3d6e3;
+    margin:0 auto;
+    margin-top:-50px;
+    border-radius:30%;
+
+}
+.neck:before{
+    content:"";
+    position:absolute ;
+    width:24px;
+    height:5px;
+    left:-2px;
+    border-radius:8px 8px 4px 4px;
+    background-color:#b6c8d4;
+}
+
+.glass{
+    position:relative;
+    margin-top: 30px;
+    width:80px;
+    height:100px;
+    background-color:#e1f0fa;
+    border-radius:0 0 40% 40%; 
+    transform:scale(0.5); 
+    bottom:10px;
+    animation: glass-move 1s 1s ease-in forwards, glass-back 1s 3.5s ease-out forwards;
+}
+.stand{
+    position:relative;
+    width:20px;
+    height:80px;    
+    background-color:#c3d6e3;
+    margin:100% auto 0 auto;
+    z-index:-99;  
+    
+}
+.base{
+    width:80px;
+    height:20px;
+    background-color:#c3d6e3;
+    position:absolute;
+    left:-30px;
+    bottom:0;
+    border-radius:40% 40% 0 0;
+}
+.glass:before{
+    content:"";
+    position:absolute;    
+    height:0;        
+    background-color:#c9563c;
+    bottom:5%; 
+    left:50%;
+    margin-left:-45%; 
+    animation: glass-height 1s 2s  ease-in forwards, drink-back-glass 1s 3.5s ease-out forwards;
+}
+
+@keyframes move{
+    0%{transform:translateY(0px);}
+    40%{
+        transform:translateY(-120px);
+    }
+    100%{
+        transform:translateY(-120px) rotate(60deg);
+    }
+}
+
+@keyframes glass-move{
+    0%{ transform: scale(0.5) rotate(0deg) translateY(0px);}
+    100%{
+        transform:scale(0.5) rotate(-15deg) translateX(80px) translateY(-200px);
+    }
+}
+@keyframes drink{
+    0%{}    
+    100%{ 
+    transform:scale(0.9) skewY(-20deg);
+    }    
+}
+@keyframes glass-height{
+    0%{height:0; border-radius:50%;}
+    100%{
+        height:50%;
+        width:95%;
+        margin-left:-50%; 
+        transform: scale(0.9) skewY(10deg);
+        border-radius:0 0 60px 60px;
+    }
+}
+
+@keyframes bottle-height{
+    0%{}
+    100%{
+        height:60%;
+        width:90%;
+    }
+}
+
+
+@keyframes bottle-back{
+    0%{transform:rotate(0deg) translateY(-120px)}
+    
+    100%{
+        transform:translateY(0px);
+        }
+}
+
+@keyframes glass-back{
+    0%{ transform: scale(0.5) rotate(-15deg) translateX(80px) translateY(-200px);
+    }    
+    100%{
+        transform:scale(0.5) rotate(0deg) translateX(0px) translateY(0px);
+    }
+}
+@keyframes drink-back-bottle{
+   0%{ 
+    transform:scale(0.9) skewY(-20deg);
+    }  
+    100%{transform:scale(1) skewY(0deg);}
+}
+@keyframes drink-back-glass{
+   0%{ 
+        height:50%;
+        width:95%;
+        margin-left:-50%; 
+        transform: scale(0.9) skewY(10deg);
+        border-radius:0 0 60px 60px;
+    }  
+    100%{
+    height:50%;
+    width:90%;
+    margin-left:-45%; 
+    border-radius:0 0 60px 60px;
+    transform:scale(1) skewY(0deg);}
+}
+
+#dessert_wrap{
+  display: flex;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
+}
+.dessert{
+	padding: 20px;
+	height: 200px;
+	width: 200px;
+	margin: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  z-index: -2;
+  animation: rotation 2s infinite linear;
+}
+.donut{
+	width: 90%;
+	height: 90%;
+	background-color: #e49080;
+	border-radius: 50%;
+	box-shadow: inset 0 2px 5px #e42080;
+}
+.cream{
+	position: relative;
+	width: 98%;
+	height: 94%;
+	border-radius: 50%;
+	background-color: #fba5ed;
+	box-shadow: 2px 0 4px #fd919d;
+}
+.cream:before{
+	content: '';
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	background-color: #f0ffa0;
+	border-radius: 50%;
+	margin: auto;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	box-shadow: inset 0 2px 3px #e45080,
+				inset 0 7px 0 #e49080,
+			    inset 0 0px 4px #777;
+}
+.cream:after{
+	content: '';
+	position: absolute;
+	width: 8px;
+	height: 8px;
+	background-color: #f00;
+	border-radius: 10px;
+	top: 30px;
+	left: 40px;
+	box-shadow: 20px 100px 0px #f00,
+				100px 80px 0px #f00,
+				100px 0px 0px #f00,
+
+				50px 120px 0px #ff0,
+				100px 50px 0px #ff0,
+				50px 0px 0px #ff0,
+
+				60px 100px 0px #0f0,
+				80px 20px 0px #0f0,
+				-10px 40px 0px #0f0,
+
+				80px 120px 0px #08f,
+				30px 20px 0px #08f,
+				-10px 80px 0px #08f,
+
+				40px -20px 0px #fff,
+				120px 30px 0px #fff,
+				25px 130px 0px #fff,
+				0px 60px 0px #fff,
+				-10px 110px 0px #fff,
+				-30px 20px 0px #fff;
+}
+@keyframes rotation {
+  from {
+      -webkit-transform: rotate(0deg);
+  }
+  to {
+      -webkit-transform: rotate(359deg);
+  }
+}
+
+#eggcontainer {
+    height:100px;
+    width:70px;
+    margin: 15%;
+    position:relative;
+    animation-name: movingegg;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: none;
+    animation-play-state: running;
+  }
+  @keyframes movingegg {
+    0% {
+      left:-10px;
+      top:3px;
+    }
+    
+    100% {
+      left:-20px;
+      top:-3px;
+    }
+    
+  }
+  
+  
+  #egg1 {
+    height:75px;
+    width:75px;
+    border-radius:50%;
+    background-color:#FFFFFF;
+    top:50px;
+    left:55px;
+    position:absolute;
+    transform: skew(25deg, -20deg, 5deg);
+    animation: eggcolor 5s infinite;
+  }
+  @keyframes eggcolor {
+    {
+    0%   
+      {background-color: red;}
+    25%  
+      {background-color:yellow;}
+
+    50%  
+      {background-color: blue;}
+    75%  
+      {background-color: green;}
+    100% 
+      {background-color: red;}
+  }
+}
+  
+  
+  #egg2 {
+    height:75px;
+    width:75px;
+    border-radius:50%;
+    background-color:#FFFFFF;
+    top:30px;
+    left:75px;
+    position:absolute;
+    transform: skew(15deg, -20deg);
+  }
+  
+  #egg3 {
+    height:75px;
+    width:75px;
+    border-radius:50%;
+    background-color:#FFFFFF;
+    top:60px;
+    left:90px;
+    position:absolute;
+    transform: skew(5deg, -20deg);
+  }
+  
+  #yolk {
+    background-color:#FFCA00;
+    height:50px;
+    width:50px;
+    position:absolute;
+    top:60px;
+    left:90px;
+    border-radius:50%;
+    transform: skew(20deg, -5deg, -10deg);
+  }
