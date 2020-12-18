@@ -1,0 +1,391 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+@import url("https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap");
+html{
+    scroll-behavior: smooth;
+  }
+  #nav {
+    list-style-type: none;
+    top: 100px;
+    margin: 0;
+    padding: 8px 0;
+    width: 200px;
+    position: fixed;
+    overflow-x: hidden;
+    border-right: 1px solid black;
+  }
+  #nav li a{
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 10px 16px;
+    font-size: 18px;
+  }
+  #nav li a:hover {
+    border-bottom: 1px solid white;
+  }
+  .active, .btn:hover {
+    border-bottom: 1px solid white;
+    color: white;
+  }
+  .textbox{
+    border: 1px solid black;
+    border-radius: 25px;
+    width: 85%;
+    float: right;
+    margin-top: 100px;
+    margin-bottom: 300px;
+  }
+  .head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Luckiest Guy", cursive;
+  }
+  .head h1{
+    margin: 0;
+    font-size: 6em;
+    padding: 0;
+    color: white;
+    text-shadow: 0 0.1em 20px
+    rgba(0, 0, 0, 1), 0.05em -0.03em 0 rgba(0, 0, 0, 1),
+    0.05em 0.005em 0 rgba(0, 0, 0, 1), 0em 0.08em 0 rgba(0, 0, 0, 1),
+    0.05em 0.08em 0 rgba(0, 0, 0, 1), 0px -0.03em 0 rgba(0, 0, 0, 1),
+    -0.03em -0.03em 0 rgba(0, 0, 0, 1), -0.03em 0.08em 0 rgba(0, 0, 0, 1), -0.03em 0 0 rgba(0, 0, 0, 1);
+  }
+  .head h1 span{
+    transform: scale(0.9);
+    display: inline-block;
+  }
+  .head h1 span:first-child{
+    animation: bop 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards infinite
+    alternate;
+  }
+  .paragraph{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lucida Sans', Arial, sans-serif;;
+  }
+  .paragraph p{
+    font-size: 2em;
+    text-align: center;
+    color: white;
+  }
+  .paragraph p span{
+    transform: scale(0.9);
+    display: inline-block;
+  }
+  .paragraph p span{
+    animation: bopB 1s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards
+    infinite alternate;
+  }
+  @keyframes bop {
+    0% {
+      transform: scale(0.9);
+    }
+    50%,
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes bopB {
+    0% {
+      transform: scale(0.9);
+    }
+    80%,
+    100% {
+      transform: scale(1);
+    }
+  }
+#box1{
+    margin-top: 80px;
+    height: 600px;
+    width: 85%;
+    float: right;
+}
+#box2{
+    margin-top: 80px;
+    margin-bottom: 80px;
+    height: 600px;
+    width: 85%;
+    float: right;
+}
+#box3{
+    margin-top: 80px;
+    height: 600px;
+    width: 85%;
+    float: right;
+}
+#box4{
+    margin-top: 80px;
+    height: 600px;
+    width: 85%;
+    float: right;
+}
+#box5{
+    margin-top: 80px;
+    height: 600px;
+    width: 85%;
+    float: right;
+}
+#box6{
+  margin-top: 80px;
+  height: 600px;
+  width: 85%;
+  float: right;
+}
+#box7{
+  margin-top: 80px;
+  height: 600px;
+  width: 85%;
+  float: right;
+}
+#box8{
+  margin-top: 80px;
+  margin-bottom: 80px;
+  height: 600px;
+  width: 85%;
+  float: right;
+}
+#box9{
+  margin-top: 80px;
+  margin-bottom: 80px;
+  height: 600px;
+  width: 85%;
+  float: right;
+}
+#translate{
+    width: 100%;
+    float: left;
+}
+#skew{
+    width: 100%;
+    float: left;
+}
+#scale{
+    width: 100%;
+    float: left;
+}
+#rotate{
+    width: 100%;
+    float: left;
+}
+#transition{
+  width: 100%;
+  float: left;
+}
+#animation{
+  width: 100%;
+  float: left;
+}
+#hover_effect{
+  width: 100%;
+  float: left;
+}
+#menu_effect{
+  width: 100%;
+  float: left;
+}
+#bubble{
+  width: 100%;
+  float: left;
+}
+#svg_text{
+  width: 100%;
+  float: left;
+}
+#svg_animation{
+  width: 100%;
+  float: left;
+}
+#canvas_1{
+  width: 100%;
+  float: left;
+}
+#canvas_2{
+  width: 100%;
+  float: left;
+}
+#canvas_3{
+  width: 100%;
+  float: left;
+}
+#canvas_4{
+  width: 100%;
+  float: left;
+}
+#canvas_5{
+  width: 100%;
+  float: left;
+}
+#canvas_6{
+  width: 100%;
+  float: left;
+}
+#canvas_7{
+  width: 100%;
+  float: left;
+}
+#canvas_8{
+  width: 100%;
+  float: left;
+}
+.txt h1{
+    font-size: 40px;
+    margin: 8%;
+    text-align: center;
+    color: white;
+}
+.ghost_container{
+  margin-top: 100px;
+  float: right;
+  width: 85%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ghost_icon{
+  width: 140px;
+  height: 160px;
+  background-color: #f2f2f2;
+  border-radius: 70px 70px 0 0;
+  position: relative;
+  cursor: pointer;
+  animation: floating 2s infinite ease-in-out;
+}
+@keyframes floating{
+  50%{
+    transform: translateY(-30px);
+  }
+}
+.face{
+  width: 100px;
+  position: absolute;
+  top: 60px;
+  left: calc(50% - 50px);
+}
+.eyes{
+  height: 24px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 14px;
+}
+.eyes span{
+  width: 24px;
+  height: 24px;
+  background-color: #2c3a47;
+  border-radius: 50%;
+  transition: .3s linear;
+}
+.ghost_icon:hover .eyes span{
+  height: 16px;
+}
+.mouth{
+  width: 40px;
+  height: 20px;
+  background-color: #2c3a47;
+  margin: auto;
+  border-radius: 0 0 20px 20px;
+  transition: .3 linear;
+}
+.ghost_icon:hover .mouth{
+  height: 12px;
+}
+.hands{
+  width: 180px;
+  position: absolute;
+  left: -20px;
+  top: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+.hands span{
+  width: 20px;
+  height: 30px;
+  background-color: #f2f2f2;
+}
+.hands span:first-child{
+  border-radius: 20px 0 0 20px;
+}
+.hands span:last-child{
+  border-radius: 0 20px 20px 0;
+}
+.feet{
+  position: absolute;
+  width: 100%;
+  bottom: -20px;
+  display: flex;
+}
+.feet span{
+  flex: 1;
+  height: 20px;
+  background-color: #f2f2f2;
+  border-radius: 0 0 20px 20px;
+}
+.feet span:first-child{
+  border-radius: 0 0 20px 12px;
+}
+.feet span:last-child{
+  border-radius: 0 0 12px 20px;
+}
+.profile_container{
+  margin-top: 65px;
+  float: right;
+  width: 85%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profile-card{
+  width: 400px;
+  text-align: center;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.card-header{
+  background: rgba(56, 40, 92);
+  padding: 50px 30px;
+}
+.name{
+  color: #f2f2f2;
+  font-size: 28px;
+  font-weight: 600;
+}
+.desc{
+  font-size: 18px;
+  color: #6ab04c;
+  margin-top: 20px;
+}
+.sm{
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+.sm a{
+  text-decoration: none;
+  color: #f2f2f2;
+  width: 56px;
+  font-size: 22px;
+  transition: .3s linear;
+}
+.sm a:hover{
+  border-bottom: 1px solid white;
+}
+.card-footer{
+  background: #f4f4f4;
+  padding: 30px 5px;
+}
+.saying{
+  flex: 1;
+  text-transform: uppercase;
+  font-size: 13px;
+  color: #e66767;
+}
+.saying span{
+  display: block;
+  color: #2c3a47;
+  font-size: 30px;
+}
